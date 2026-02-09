@@ -4,15 +4,25 @@
  * Author: Conner Davis
  * Date Developed: 2/8/2026
  * Last Date Changed: 2/9/2026
- * Rev:
+ * Rev: 2/9/2026
 
  */
 
 package monsters;
 
 public class Witch extends Monster {
-    public Witch(Weapons weapons, SpecialPowers specialPowers, Integer eyes, String color, String name, Integer health) {
+    private Integer numPotions;
+    public Witch(Weapons weapons, SpecialPowers specialPowers, Integer eyes, String color, String name, Integer health, Integer numPotions) {
         super(weapons, specialPowers, eyes, color, name, health);
+        this.numPotions = numPotions;
+    }
+
+    public Integer getNumPotions() {
+        return numPotions;
+    }
+
+    public void setNumPotions(Integer numPotions) {
+        this.numPotions = numPotions;
     }
 
     @Override

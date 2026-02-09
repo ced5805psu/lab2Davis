@@ -4,7 +4,7 @@
  * Author: Conner Davis
  * Date Developed: 2/8/2026
  * Last Date Changed: 2/9/2026
- * Rev:
+ * Rev: 2/9/2026
 
  */
 
@@ -18,7 +18,7 @@ public abstract class Monster {
     private String name;
     private Integer health;
     private SpecialPowers specialPowers;
-    public Monster(Weapons weapons, SpecialPowers specialPowers,Integer eyes, String color, String name, Integer health) {
+    public Monster(Weapons weapons, SpecialPowers specialPowers, Integer eyes, String color, String name, Integer health) {
         this.weapons = weapons;
         this.eyes = eyes;
         this.enemy = "human";

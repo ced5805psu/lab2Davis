@@ -4,20 +4,31 @@
  * Author: Conner Davis
  * Date Developed: 2/8/2026
  * Last Date Changed: 2/9/2026
- * Rev:
+ * Rev: 2/9/2026
 
  */
 
 package monsters;
 
 public class Skeleton extends Monster {
-    public Skeleton(Weapons weapons, SpecialPowers specialPowers, Integer eyes, String color, String name, Integer health) {
+    private Integer bones;
+    public Skeleton(Weapons weapons, SpecialPowers specialPowers, Integer eyes, String color, String name, Integer health, Integer bones) {
         super(weapons, specialPowers, eyes, color, name, health);
+        this.bones = bones;
     }
 
+    public Integer getBones() {
+        return bones;
+    }
+
+    public void setBones(Integer bones) {
+        this.bones = bones;
+    }
+    @Override
     public void move() {
         System.out.println("The Skeleton ran at you!");
     }
+    @Override
     public void superpower() {
         System.out.println("The skeleton used its " + getSpecialPowers() + " and hit you with its " + getWeapons() + "!");
     }

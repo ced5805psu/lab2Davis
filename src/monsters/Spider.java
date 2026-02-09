@@ -4,15 +4,25 @@
  * Author: Conner Davis
  * Date Developed: 2/8/2026
  * Last Date Changed: 2/9/2026
- * Rev:
+ * Rev: 2/9/2026
 
  */
 
 package monsters;
 
 public class Spider extends Monster {
-    public Spider(Weapons weapons, SpecialPowers specialPowers,Integer eyes, String color, String name, Integer health) {
+    private Integer legs;
+    public Spider(Weapons weapons, SpecialPowers specialPowers,Integer eyes, String color, String name, Integer health, Integer legs) {
         super(weapons, specialPowers,eyes, color, name, health);
+        this.legs = legs;
+    }
+
+    public Integer getLegs() {
+        return legs;
+    }
+
+    public void setLegs(Integer legs) {
+        this.legs = legs;
     }
 
     @Override
