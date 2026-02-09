@@ -1,29 +1,26 @@
 package monsters;
 
 public abstract class Monster {
-    private Attacks attacks;
+    private Weapons weapons;
     private Integer eyes;
     private final String enemy;
     private String color;
     private String name;
     private Integer health;
-    public Monster(Weapons weaponAttacks, Integer eyes, String color, String name, Integer health) {
-        this.attacks = new Attacks(weaponAttacks);
+    private SpecialPowers specialPowers;
+    public Monster(Weapons weapons, SpecialPowers specialPowers,Integer eyes, String color, String name, Integer health) {
+        this.weapons = weapons;
         this.eyes = eyes;
         this.enemy = "human";
         this.color = color;
         this.name = name;
         this.health = health;
+        this.specialPowers = specialPowers;
     }
 
     //Getters & Setters
-    public Attacks getAttacks() {
-        return attacks;
-    }
-
-    public void setAttacks(Attacks attacks) {
-        this.attacks = attacks;
-    }
+    public Weapons getWeapons() {return weapons;}
+    public void setWeapons(Weapons weapons) {this.weapons = weapons;}
 
     public Integer getEyes() {
         return eyes;
@@ -55,6 +52,8 @@ public abstract class Monster {
     public void setHealth(Integer health) {
         this.health = health;
     }
+    public SpecialPowers getSpecialPowers() {return specialPowers;}
+    public void setSpecialPowers(SpecialPowers specialPowers) {this.specialPowers = specialPowers;}
 
     //Abstract
     public abstract void move();

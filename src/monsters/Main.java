@@ -2,11 +2,11 @@ package monsters;
 
 public class Main {
     public static void main(String[] args) {
-        Monster z1 = new Zombie(Weapons.SWORD, 2, "Green", "Guy", 100);
-        Monster s1 = new Skeleton(Weapons.BOW, 0, "White", "Gordon", 80);
-        Monster w1 = new Wither(Weapons.SWORD, 2, "Gray", "Gary", 200);
-        Monster s2 = new Spider(Weapons.FANGS, 6, "Red", "Peter", 150);
-        Monster w2 = new Witch(Weapons.POTIONS, 2, "Green", "Griselda", 110);
+        Monster z1 = new Zombie(Weapons.SWORD, SpecialPowers.SUPER_STRENGTH, 2,"Green", "Guy", 100);
+        Monster s1 = new Skeleton(Weapons.BOW, SpecialPowers.SUPER_SPEED,0, "White", "Gordon", 80);
+        Monster w1 = new Wither(Weapons.SWORD, SpecialPowers.SUPER_STRENGTH,2, "Gray", "Gary", 200);
+        Monster s2 = new Spider(Weapons.FANGS, SpecialPowers.POISON,6, "Red", "Peter", 150);
+        Monster w2 = new Witch(Weapons.POTIONS, SpecialPowers.CLAIRVOYANCE,2, "Green", "Griselda", 110);
 
         System.out.println("Mob 1: " + z1.getName());
         System.out.println(z1.getColor());
