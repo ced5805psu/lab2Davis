@@ -1,8 +1,15 @@
 package monsters;
 
 public class Zombie extends Monster {
-    public Zombie(Weapons weaponAttacks, Integer eyes, String color, String name) {
-        super(weaponAttacks, eyes, color, name);
+    public Zombie(Weapons weaponAttacks, Integer eyes, String color, String name, Integer health) {
+        super(weaponAttacks, eyes, color, name, health);
     }
-    public void move() {}
+    @Override
+    public void move() {
+        System.out.println("The zombie is sprinting at you!");
+    }
+    @Override
+    public void superpower() {
+        System.out.println("The zombie used its super strength & hit you!");
+    }
 }

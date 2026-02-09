@@ -58,4 +58,5 @@ public abstract class Monster {
 
     //Abstract
     public abstract void move();
+    public abstract void superpower();
 }
